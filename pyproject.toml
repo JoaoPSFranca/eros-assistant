@@ -9,6 +9,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "typer[all]",
+    "python-dotenv",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

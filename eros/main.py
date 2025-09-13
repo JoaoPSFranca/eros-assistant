@@ -1,4 +1,15 @@
 import typer
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from eros.config import Settings
+
+try:
+    settings = Settings()
+except ValueError as e:
+    typer.secho(f"Erro de configuração: {e}", fg=typer.colors.RED)
+    raise typer.Exit(code=1)
 
 app = typer.Typer(
     name="Eros",
@@ -8,10 +19,7 @@ app = typer.Typer(
 
 @app.command()
 def main():
-    """
-    Ponto de entrada principal para a assistente Eros.
-    """
-    typer.secho("Olá! Eu sou Eros. Atualmente em desenvolvimento.", fg=typer.colors.CYAN)
+    typer.secho("Olá! Eu sou Eros. Configuração carregada com sucesso.", fg=typer.colors.CYAN)
 
 if __name__ == "__main__":
     app()
