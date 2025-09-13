@@ -4,6 +4,8 @@
 
 ---
 
+![Alt](https://repobeats.axiom.co/api/embed/b6d93cc31b7f99828bf90922c9065d546c0dd92e.svg "Repobeats analytics image")
+
 ## Tabela de Conteúdos
 1. [Sobre o Projeto](#sobre-o-projeto)
 2. [Arquitetura Fundamental](#arquitetura-fundamental)
