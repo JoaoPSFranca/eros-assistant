@@ -10,6 +10,8 @@ requires-python = ">=3.11"
 dependencies = [
     "typer[all]",
     "python-dotenv",
+    "google-generativeai",
+    "rich",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -22,6 +24,7 @@ classifiers = [
 dev = [
     "pytest",
     "ruff",
+    "pytest-mock",
 ]
 
 # Ponto de entrada para o nosso CLI
