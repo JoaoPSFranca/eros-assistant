@@ -26,7 +26,7 @@ def initialize_brain(api_key: str):
 def start_chat_session() -> ChatSession:
     if _model is None:
         raise RuntimeError(
-            "O cérebro não foi inicializado. Chame initialize_brain() primeiro."
+            "O cérebro não foi inicializado." + "Chame initialize_brain() primeiro."
         )
     chat = _model.start_chat(history=[])
     return chat

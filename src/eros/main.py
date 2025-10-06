@@ -16,7 +16,9 @@ except (ValueError, RuntimeError) as e:
 
 app = typer.Typer(
     name="Eros",
-    help="Um assistente virtual pessoal para automação e auxílio no desenvolvimento.",
+    help=(
+        "Um assistente virtual pessoal para automação" + "e auxílio no desenvolvimento."
+    ),
     add_completion=False,
 )
 
