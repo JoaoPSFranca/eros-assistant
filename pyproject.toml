@@ -30,4 +30,3 @@ dev = [
 # Ponto de entrada para o nosso CLI
 [project.scripts]
 eros = "eros.main:app"
-

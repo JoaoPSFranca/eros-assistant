@@ -1,8 +1,8 @@
 # Eros — Agente Orquestrador (Prototype)
 
-[![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org)  
-[![License](https://img.shields.io/badge/license-MIT-green)](#license)  
-[![CI](https://github.com/JoaoPSFranca/eros-assistant/actions/workflows/python-ci.yml/badge.svg)](#ci)  
+[![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org)
+[![License](https://img.shields.io/badge/license-MIT-green)](#license)
+[![CI](https://github.com/JoaoPSFranca/eros-assistant/actions/workflows/python-ci.yml/badge.svg)](#ci)
 
 **Eros** é um agente orquestrador escrito em Python que delega raciocínio a LLMs via API (ex.: Gemini, OpenAI, Mistral) e executa ferramentas locais (execução segura de comandos, OCR, automação de UI, agenda). O foco do projeto: privacidade, baixo custo operacional, facilidade de integração em Python e possibilidade futura de modo híbrido (cloud + local).
 
@@ -70,7 +70,7 @@ python src/eros/main.py
 ```
 
 
-## Development 
+## Development
 
 - `pre-commit`: utilizado para formatação de commits.
     -  Utilizados: **black**, **isort**, **flake8**.
@@ -92,7 +92,7 @@ O projeto usa um padrão *ProviderAdapter* para abstrair detalhes específicos d
 **Interface mínima esperada (`providers/base.py`)**
 - `initialize()`
 - `start_chat_session()`
-- `send_message(session, prompt, **kwargs) -> dict`  
+- `send_message(session, prompt, **kwargs) -> dict`
 `send_message` deve retornar: `{"text": str, "tokens_used": int|None, "latency_ms": float, "meta": {...}}`
 
 
@@ -131,6 +131,6 @@ Este repositório usa a licença **MIT**. Veja o arquivo `LICENSE` para detalhes
 
 
 ## Contato
-Autor: **João Pedro Franca**  
-Repo: `https://github.com/JoaoPSFranca/eros-assistant`  
+Autor: **João Pedro Franca**
+Repo: `https://github.com/JoaoPSFranca/eros-assistant`
 Email: `francasjoaopedro@gmail.com` — para reports de segurança use `SECURITY.md`.

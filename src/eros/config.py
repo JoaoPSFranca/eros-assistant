@@ -1,5 +1,6 @@
 import os
 
+
 class Settings:
     GEMINI_API_KEY: str
 

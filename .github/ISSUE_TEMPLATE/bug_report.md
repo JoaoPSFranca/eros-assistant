@@ -22,6 +22,6 @@ O que você esperava que acontecesse.
 Cole logs relevantes.
 
 **Ambiente**
-- OS: 
-- Python: 
-- Eros commit: 
+- OS:
+- Python:
+- Eros commit:

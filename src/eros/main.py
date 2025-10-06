@@ -1,11 +1,11 @@
+import rich
 import typer
 from dotenv import load_dotenv
-import rich
+
+from eros import brain
+from eros.config import Settings
 
 load_dotenv()
-
-from eros.config import Settings
-from eros import brain
 
 try:
     settings = Settings()
@@ -20,9 +20,12 @@ app = typer.Typer(
     add_completion=False,
 )
 
+
 @app.command()
 def main():
-    typer.secho("Olá! Eu sou Eros. Digite 'sair' ou 'exit' para terminar.", fg=typer.colors.CYAN)
+    typer.secho(
+        "Olá! Eu sou Eros. Digite 'sair' ou 'exit' para terminar.", fg=typer.colors.CYAN
+    )
 
     chat_session = brain.start_chat_session()
 
@@ -32,7 +35,9 @@ def main():
             typer.secho("Até logo!", fg=typer.colors.CYAN)
             break
 
-        with rich.get_console().status("[bold green]Eros está pensando...", spinner="dots"):
+        with rich.get_console().status(
+            "[bold green]Eros está pensando...", spinner="dots"
+        ):
             response = brain.get_chat_response(chat_session, prompt)
 
         rich.print(f"[bold cyan]Eros:[/bold cyan] {response}")
