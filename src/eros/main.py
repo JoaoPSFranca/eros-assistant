@@ -17,7 +17,8 @@ except (ValueError, RuntimeError) as e:
 app = typer.Typer(
     name="Eros",
     help=(
-        "Um assistente virtual pessoal para automação" + "e auxílio no desenvolvimento."
+        "Um assistente virtual pessoal para automação "
+        + "e auxílio no desenvolvimento."
     ),
     add_completion=False,
 )
@@ -26,7 +27,8 @@ app = typer.Typer(
 @app.command()
 def main():
     typer.secho(
-        "Olá! Eu sou Eros. Digite 'sair' ou 'exit' para terminar.", fg=typer.colors.CYAN
+        "Olá! Eu sou Eros. Digite 'sair'" "ou 'exit' para terminar.",
+        fg=typer.colors.CYAN,
     )
 
     chat_session = brain.start_chat_session()

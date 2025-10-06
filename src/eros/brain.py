@@ -25,9 +25,8 @@ def initialize_brain(api_key: str):
 
 def start_chat_session() -> ChatSession:
     if _model is None:
-        raise RuntimeError(
-            "O cérebro não foi inicializado." + "Chame initialize_brain() primeiro."
-        )
+        mesage = "O cérebro não foi inicializado. " "Chame initialize_brain() primeiro."
+        raise RuntimeError(mesage)
     chat = _model.start_chat(history=[])
     return chat
 
@@ -40,5 +39,5 @@ def get_chat_response(chat: ChatSession, prompt: str) -> str:
         print(f"Erro ao comunicar com a API do Gemini: {e}")
         return (
             "Desculpe, tive um problema para me conectar ao meu cérebro."
-            + " Tente novamente."
+            " Tente novamente."
         )
