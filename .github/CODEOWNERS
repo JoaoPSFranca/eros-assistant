@@ -1,0 +1,5 @@
+# Owners for the repo
+# formato: <path> @github-username
+/ @JoaoPSFranca
+/src/ @JoaoPSFranca
+/docs/ @JoaoPSFranca
